@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: "./",
+  base: process.env.NODE_ENV === "production" ? "/waterfall-list-vue/" : "./",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url))
