@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: process.env.NODE_ENV === "production" ? "/waterfall-list-vue/" : "./",
+  base: "/waterfall-list-vue/",
+  // base: process.env.NODE_ENV === "production" ? "/waterfall-list-vue/" : "./", // 对github-page无效
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url))

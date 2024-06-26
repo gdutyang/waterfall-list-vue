@@ -20,9 +20,6 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
-env:
-  NODE_ENV: production
-
 jobs:
   # 单次部署的工作描述
   deploy:
@@ -31,10 +28,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: 'Deploy by environment'
-        run: |
-        echo $NODE_ENV
-        echo $DEPLOY_ENV
       - name: Checkout
         uses: actions/checkout@v4
       - name: Set up Node
