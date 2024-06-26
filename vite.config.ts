@@ -8,6 +8,9 @@ export default defineConfig({
     vue(),
   ],
   base: "/waterfall-list-vue/",
+  build: {
+    outDir: 'docs'
+  },
   // base: process.env.NODE_ENV === "production" ? "/waterfall-list-vue/" : "./", // 对github-page无效
   resolve: {
     alias: {
