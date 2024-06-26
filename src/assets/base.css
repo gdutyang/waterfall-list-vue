@@ -71,14 +71,20 @@ div:focus {
 .ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .ellipsis_1, .ellipsis_2, .ellipsis_3 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: -webkit-box; /* 使用弹性盒子布局，支持多行截断 */
+  -webkit-box-orient: vertical; /* 设置盒子的方向为垂直 */
+  overflow: hidden; /* 隐藏溢出的内容 */
 }
 /* 溢出...显示 子节点生效 */
-.ellipsis_1 { -webkit-line-clamp: 1; }
-.ellipsis_2 { -webkit-line-clamp: 2; }
-.ellipsis_3 { -webkit-line-clamp: 3; }
+.ellipsis_1 { 
+  -webkit-line-clamp: 1; /* 限制显示1行文本，超出部分显示省略号 */
+}
+.ellipsis_2 { 
+  -webkit-line-clamp: 2; /* 限制显示2行文本，超出部分显示省略号 */
+}
+.ellipsis_3 { 
+  -webkit-line-clamp: 3; /* 限制显示3行文本，超出部分显示省略号 */
+} 
 
 button {
   font-size: 14px;
